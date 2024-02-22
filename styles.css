@@ -498,9 +498,9 @@ nav {
 
 .footer__container {
   position: relative;
-  display: grid;
-  grid-template-columns: 400px repeat(3, 1fr);
-  gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .footer__blur {
@@ -565,6 +565,13 @@ nav {
 }
 
 @media (width < 900px) {
+  .horaire{
+    width: 65vw !important;
+    padding-left: 10px !important;
+  }
+  .time__card {
+    width: 60vw !important;
+  }
   .nav__links {
     display: none;
   }
@@ -604,6 +611,24 @@ nav {
 }
 
 @media (width < 600px) {
+
+  .hor-sub{
+    flex-direction: column !important;
+      width: 95vw !important;
+  }
+  .email{
+    margin-left: 50px;
+  }
+.footer__container{
+  flex-direction: column;
+}
+  .horaire{
+    width: 95vw !important;
+    padding-left: 10px !important;
+  }
+  .time__card {
+    width: 90vw !important;
+  }
   .explore__header {
     flex-direction: column;
   }
@@ -648,7 +673,7 @@ nav {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 30vw;
+  width: 450px;
   align-items: center;
   padding: 20px;
   margin: 0 auto;
@@ -667,7 +692,7 @@ nav {
   border: 2px solid transparent;
   border-radius: 10px;
   transition: 0.3s;
-  width: 25vw;
+  width: 400px;
   margin: 0 auto;
 }
 
@@ -713,4 +738,42 @@ nav {
   justify-content: space-around;
   width: 80%;
   margin: 0 auto;
+}
+
+.footer__col{
+max-width: 300px;
+}
+
+.email{
+  margin-top: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hor-sub{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48vw;
+  margin: 0 auto;
+  padding-right: 50px;
+}
+
+.email .btn{
+  height: 50px;
+}
+
+.email input{
+  height: 50px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid var(--secondary-color);
+  margin-bottom: 7px;
+  width: 200px;
+  background-color: #111317;
+  color: #ffffff;
+  padding: 7px 12px;
+  font-size: 14px;
 }
